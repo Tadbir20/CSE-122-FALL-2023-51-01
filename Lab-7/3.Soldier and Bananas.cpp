@@ -1,19 +1,18 @@
 #include<iostream>
 using namespace std;
-
-int main(){
-
-    int k,n,w;
-    cin>>k>>n>>w;
-    
-    int total=0;
-    
-    for(int i=1;i<=w;i++){
-        total=total+(i*k);
+int main()
+{
+    int k,n,w,i;
+    cin>>k >>n >>w;
+    int sum=0;
+    for(i=1;i<=w; i++)
+    {
+        sum+=i;
     }
-    
-    if(n>total){
-        cout<<0<<endl;
-    }else{
-        cout<<total-n<<endl;
-    }
+    int d=(sum*k)-n;
+    if(d<0)
+    cout <<"0";
+    else
+    cout <<d;
+    return 0;
+}
